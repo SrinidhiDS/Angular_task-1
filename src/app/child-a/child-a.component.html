@@ -1,0 +1,34 @@
+<div class="flex-container">
+    
+    <form [formGroup]="logindata" (ngSubmit)="onsubmit()">
+        <input type="text" placeholder="Firstname" formControlName="firstname">
+        <div *ngIf="getControl.firstname.touched && getControl.firstname.invalid" class="text-danger">
+            <div *ngIf="getControl.firstname.errors.required">Name is required.</div>
+            <div *ngIf="getControl.firstname.errors?.minlength">Minimum 3 character are required.</div>
+          </div>
+        <pre></pre>
+        <input type="text" placeholder="Lastname" formControlName="lastname">
+        <pre></pre>
+        <input type="text" placeholder="Email-id" formControlName="emailid">
+        <div *ngIf="getControl.emailid.touched && getControl.emailid.invalid" class="text-danger">
+            <div *ngIf="getControl.emailid.errors.required">Email is required.</div>
+            <div *ngIf="getControl.emailid.errors.email">Email seems invalid.</div>
+          </div>
+        <pre></pre>
+        <input type="password" placeholder="Password" formControlName="password">
+        <div *ngIf="getControl.password.touched && getControl.password.invalid" class="text-danger">
+            <div *ngIf="getControl.password.errors.required">Password is required.</div>
+            <div *ngIf="getControl.password.errors?.minlength">Minimum 8 character are required.</div>
+          </div>
+        <pre></pre>
+        <input type="password" placeholder="Re-Enter the Password" formControlName="confirm_password">
+        <div *ngIf="getControl.confirm_password.touched && getControl.confirm_password.passworderror" class="text-danger">
+            <div class="text-danger" >Password doesn't match</div>
+        </div>
+        <pre></pre>
+        <div class="submit-btn"></div>
+    <button [disabled]="!logindata.valid">SUBMIT</button>
+    
+    </form>
+</div>
+

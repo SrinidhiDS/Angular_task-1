@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #66d0fa;">
+    <div class="container">  
+        <div class="d-flex align-items-center" style="align-items: right;">
+          
+          <button type="button" class="btn btn-primary me-3" (click) ="toggle()">
+            Toggle
+          </button>
+        </div>
+      </div>
+  </nav>
+  <!-- Navbar -->
+
+<app-child-a [ngStyle]="{'display':showFirst ? 'initial':'none'}" ></app-child-a> 
+<app-child-b [ngStyle]="{'display':!showFirst ? 'initial':'none'}"></app-child-b> 
+

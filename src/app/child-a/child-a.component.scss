@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+  }
+  .text-danger{
+    text-align: center;
+    color: red;
+    margin: 2px;
+    font-size: small
+}
+.submit-btn button.active{
+ color: aliceblue;
+ background-color: blue;
+}
